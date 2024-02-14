@@ -621,7 +621,7 @@ describe('TopNav', function () {
                 $('body').html(
                     '<nav><div id="navbar"><ul><li><div id="password" ' +
                     'class="navbar-form hidden"><input type="password" ' +
-                    'id="passwordinput" placeholder="Password (required)" ' +
+                    'id="passwordinput" placeholder="Password (recommended)" ' +
                     'class="form-control" size="23" /></div></li></ul></div></nav>'
                 );
                 $.PrivateBin.TopNav.init();
