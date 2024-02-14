@@ -4960,11 +4960,10 @@ jQuery.PrivateBin = (function($, RawDeflate) {
             const plainText = Editor.getText(),
                   format    = PasteViewer.getFormat(),
                   // the methods may return different values if no files are attached (null, undefined or false)
-                  files     = TopNav.getFileList() || AttachmentViewer.getFile() || AttachmentViewer.hasAttachment(),
-                  password = TopNav.getPassword();
+                  files     = TopNav.getFileList() || AttachmentViewer.getFile() || AttachmentViewer.hasAttachment();
 
             // do not send if there is no data
-            if (!password || (plainText.length === 0 && !files)) {
+            if (plainText.length === 0 && !files) {
                 // revert loading status…
                 Alert.hideLoading();
                 TopNav.showCreateButtons();
@@ -4973,7 +4972,7 @@ jQuery.PrivateBin = (function($, RawDeflate) {
 
             // prepare server interaction
             ServerInteraction.prepare();
-            ServerInteraction.setCryptParameters(password);
+            ServerInteraction.setCryptParameters(TopNav.getPassword());
 
             // set success/fail functions
             ServerInteraction.setSuccess(showCreatedPaste);
