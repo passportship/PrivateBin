@@ -203,7 +203,7 @@ endif;
 if ($isPage) :
 ?>
 						<button id="sendbutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'primary'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> <?php echo I18n::_('Send'), PHP_EOL;
+							<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> <?php echo I18n::_('Get link to share'), PHP_EOL;
 else :
 ?>
 						<button id="newbutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'default'; ?> navbar-btn">
@@ -280,7 +280,7 @@ if ($isCpct) :
 ?> checked="checked"<?php
     endif;
 ?> />
-									<?php echo I18n::_('Burn after reading'), PHP_EOL; ?>
+									<?php echo I18n::_('Can only be viewed one time'), PHP_EOL; ?>
 								</label>
 							</li>
 <?php
@@ -342,7 +342,7 @@ else :
 ?> checked="checked"<?php
     endif;
 ?> />
-								<?php echo I18n::_('Burn after reading'), PHP_EOL; ?>
+								<?php echo I18n::_('Can only be viewed one time'), PHP_EOL; ?>
 							</label>
 						</div>
 					</li>
@@ -555,7 +555,7 @@ if ($isPage) :
 else :
 ?>
 						<button id="sendbutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'primary'; ?>">
-							<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> <?php echo I18n::_('Send'), PHP_EOL;
+							<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> <?php echo I18n::_('Get link to share'), PHP_EOL;
 endif;
 ?>
 						</button>
